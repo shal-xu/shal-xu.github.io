@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(
+    330deg,
+    rgba(226, 0, 0, 1) 0%,
+    rgba(255, 208, 17, 1) 100%
+  );
+
+  button {
+    cursor: pointer;
+    padding: 10px 0;
+    width: 170px;
+    height: 60px;
+    color: white;
+    border: none;
+    background: none;
+    font-size: 20px;
+    z-index: 1;
+    position: relative;
+    top: 0;
+    transition: all 0.5s;
+    overflow: hidden;
+
+    > span::before {
+      font-size: 20px;
+      content: '♥️ ';
+      position: absolute;
+      top: 100px;
+      transition: all 0.5s;
+      left: 28px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      font-size: 25px;
+
+      > span::before {
+        content: '♥️ ';
+        position: absolute;
+        top: 17px;
+        font-size: 25px;
+      }
+    }
+  }
+
+  .highlight {
+    left: calc(16.5% - 67px);
+    top: 10px;
+    width: 135px;
+    height: 40px;
+    border-radius: 15px;
+    position: absolute;
+    background: white;
+    transition: all 0.5s;
+  }
+}
+
+.slide {
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+  display: flex;
+}
+
+.page {
+  transition: all 1s;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow: scroll;
+}
+
+#rsvp {
+  cursor: pointer;
+  padding: 10px 0;
+  width: 170px;
+  height: 60px;
+  color: lightgray;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 5px lightgray;
+
+  &:hover {
+    box-shadow: -5px -5px 20px yellow, 5px 5px 20px red;
+    color: darkorange;
+  }
+
+  border: none;
+  background: white;
+  font-size: 20px;
+  z-index: 1;
+  transition: all 0.5s;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+#script {
+  font-size: 25px;
+  font-family: 'Brush Script MT', cursive;
+  color: gray;
+  transform: rotate(-20deg);
+  transition: all 1s;
+
+  &:hover {
+    color: gold;
+  }
+}
+
+.item {
+  font-size: 30px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 300px;
+  height: 200px;
+  flex-shrink: 0;
+  color: white;
+  transition: all 1s;
+
+  > .background {
+    width: 320px;
+    height: 220px;
+    transition: all 1s;
+    background-size: cover;
+    background-position: center;
+    -webkit-transform: rotateY(0);
+    position: absolute;
+    z-index: -1;
+    backface-visibility: hidden;
+  }
+
+  &:hover {
+    color: orange;
+
+    > .background {
+      transition: all 1s;
+      -webkit-transform: rotateY(180deg);
+    }
+  }
+}
