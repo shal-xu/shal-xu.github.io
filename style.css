@@ -69,7 +69,6 @@ nav .highlight {
 .slide {
   overflow: hidden;
   width: 100%;
-  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,9 +80,10 @@ nav .highlight {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 100%;
-  height: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   display: inline-block;
-  overflow: scroll;
+  position: relative;
 }
 
 #rsvp {
@@ -115,13 +115,14 @@ nav .highlight {
 }
 
 #script {
-  font-size: 25px;
+  font-size: 45px;
   font-family: 'Brush Script MT', cursive;
-  color: gray;
-  -webkit-transform: rotate(-20deg);
-          transform: rotate(-20deg);
+  color: lightgray;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
   -webkit-transition: all 1s;
   transition: all 1s;
+  position: relative;
 }
 
 #script:hover {
@@ -173,5 +174,35 @@ nav .highlight {
   -webkit-transition: all 1s;
   transition: all 1s;
   -webkit-transform: rotateY(180deg);
+}
+
+@-webkit-keyframes dangle {
+  from {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  to {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+}
+
+@keyframes dangle {
+  from {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  to {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+}
+
+.ornament {
+  -webkit-animation: dangle 3s ease-in-out 1s infinite alternate;
+          animation: dangle 3s ease-in-out 1s infinite alternate;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  right: 5rem;
 }
 /*# sourceMappingURL=style.css.map */

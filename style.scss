@@ -66,7 +66,6 @@ nav {
 .slide {
   overflow: hidden;
   width: 100%;
-  height: 500px;
   display: flex;
 }
 
@@ -74,9 +73,10 @@ nav {
   transition: all 1s;
   flex-shrink: 0;
   width: 100%;
-  height: 100%;
+  flex-basis: 100%;
   display: inline-block;
-  overflow: scroll;
+  //overflow: scroll;
+  position: relative;
 }
 
 #rsvp {
@@ -106,12 +106,12 @@ nav {
 }
 
 #script {
-  font-size: 25px;
+  font-size: 45px;
   font-family: 'Brush Script MT', cursive;
-  color: gray;
-  transform: rotate(-20deg);
+  color: lightgray;
+  transform: rotate(-15deg);
   transition: all 1s;
-
+  position: relative;
   &:hover {
     color: gold;
   }
@@ -150,4 +150,19 @@ nav {
       -webkit-transform: rotateY(180deg);
     }
   }
+}
+
+@keyframes dangle {
+  from {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+.ornament {
+  animation: dangle 3s ease-in-out 1s infinite alternate;
+  transform-origin: top;
+  right: 5rem;
 }
