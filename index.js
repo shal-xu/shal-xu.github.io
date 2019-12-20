@@ -21,6 +21,13 @@ $(window).on('load', function() {
 
   setActiveTab(0);
 
+  $('.sparkle').sparkleh({
+    count: 80,
+    color: ['gold', 'white', 'red'],
+    speed: 0.5,
+    overlap: 60
+  });
+
   const menuItems = [
     {
       name: 'Wonton Noodle Soup with Bok Choy',
@@ -73,11 +80,4 @@ $(window).on('load', function() {
       </div>`
     )
   );
-
-  $('.sparkle').sparkleh({
-    count: 50,
-    color: ['gold', 'white', 'red'],
-    speed: 0.5,
-    overlap: 60
-  });
 });

@@ -10,7 +10,7 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   background: linear-gradient(330deg, #e20000 0%, #ffd011 100%);
 }
 
@@ -81,10 +81,10 @@ nav .highlight {
   -webkit-transition: all 1s;
   transition: all 1s;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   width: 100%;
   -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
   display: inline-block;
   position: relative;
   overflow-y: scroll;
@@ -99,7 +99,7 @@ nav .highlight {
   margin: 20px;
   border-radius: 15px;
   -webkit-box-shadow: 0 0 5px lightgray;
-          box-shadow: 0 0 5px lightgray;
+  box-shadow: 0 0 5px lightgray;
   border: none;
   background: #4a2a3f;
   font-size: 20px;
@@ -110,7 +110,7 @@ nav .highlight {
 
 #rsvp:hover {
   -webkit-box-shadow: -5px -5px 20px yellow, 5px 5px 20px red;
-          box-shadow: -5px -5px 20px yellow, 5px 5px 20px red;
+  box-shadow: -5px -5px 20px yellow, 5px 5px 20px red;
   color: darkorange;
 }
 
@@ -123,17 +123,93 @@ nav .highlight {
   font-family: 'Brush Script MT', cursive;
   color: lightgray;
   -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
+  transform: rotate(-15deg);
   -webkit-transition: all 1s;
   transition: all 1s;
   position: relative;
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   margin: 80px 0 80px 40px;
 }
 
 #script:hover {
   color: gold;
+}
+
+@-webkit-keyframes dangle {
+  from {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  to {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes dangle {
+  from {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  to {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
+}
+
+.ornament {
+  -webkit-transform-origin: top;
+  transform-origin: top;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  line-height: 150%;
+  border-bottom: 2px solid gold;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  position: relative;
+}
+
+h1:hover > .shadow {
+  -webkit-clip-path: polygon(
+    40% 100%,
+    45% 130%,
+    55% 130%,
+    60% 100%,
+    60% 100%,
+    40% 100%
+  );
+  clip-path: polygon(
+    40% 100%,
+    45% 130%,
+    55% 130%,
+    60% 100%,
+    60% 100%,
+    40% 100%
+  );
+}
+
+h1 > .shadow {
+  position: absolute;
+  bottom: 0;
+  background: gold;
+  -webkit-clip-path: polygon(
+    40% 0%,
+    45% 30%,
+    55% 30%,
+    60% 0%,
+    60% 100%,
+    40% 100%
+  );
+  clip-path: polygon(40% 0%, 45% 30%, 55% 30%, 60% 0%, 60% 100%, 40% 100%);
+  color: black;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  padding-top: 20px;
 }
 
 .item {
@@ -144,16 +220,16 @@ nav .highlight {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-preferred-size: 300px;
-      flex-basis: 300px;
+  flex-basis: 300px;
   height: 200px;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   color: white;
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -170,7 +246,7 @@ nav .highlight {
   position: absolute;
   z-index: -1;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .item:hover {
@@ -181,60 +257,5 @@ nav .highlight {
   -webkit-transition: all 1s;
   transition: all 1s;
   -webkit-transform: rotateY(180deg);
-}
-
-@-webkit-keyframes dangle {
-  from {
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-  }
-  to {
-    -webkit-transform: rotate(20deg);
-            transform: rotate(20deg);
-  }
-}
-
-@keyframes dangle {
-  from {
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-  }
-  to {
-    -webkit-transform: rotate(20deg);
-            transform: rotate(20deg);
-  }
-}
-
-.ornament {
-  -webkit-transform-origin: top;
-          transform-origin: top;
-}
-
-h1 {
-  color: white;
-  text-align: center;
-  font-size: 35px;
-  line-height: 150%;
-  border-bottom: 2px solid gold;
-  margin-bottom: 20px;
-  padding-top: 20px;
-  position: relative;
-}
-
-h1:hover > .shadow {
-  -webkit-clip-path: polygon(40% 100%, 45% 130%, 55% 130%, 60% 100%, 60% 100%, 40% 100%);
-          clip-path: polygon(40% 100%, 45% 130%, 55% 130%, 60% 100%, 60% 100%, 40% 100%);
-}
-
-h1 > .shadow {
-  position: absolute;
-  bottom: 0;
-  background: yellow;
-  -webkit-clip-path: polygon(40% 0%, 45% 30%, 55% 30%, 60% 0%, 60% 100%, 40% 100%);
-          clip-path: polygon(40% 0%, 45% 30%, 55% 30%, 60% 0%, 60% 100%, 40% 100%);
-  color: black;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  padding-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */
