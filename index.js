@@ -34,7 +34,7 @@ $(window).on('load', function() {
       image: 'images/wonton-noodle-soup.jpg'
     },
     {
-      name: 'Century Egg, Pork and Asparagus Porridge',
+      name: 'Century Egg and Pork Porridge',
       image: 'images/porridge.jpg'
     },
     {
@@ -46,11 +46,11 @@ $(window).on('load', function() {
       image: 'images/sunflower-seeds.jpg'
     },
     {
-      name: ' Asian Pancakes',
+      name: 'Asian Pancakes',
       image: 'images/asian-pancakes.jpg'
     },
     {
-      name: ' Soymilk',
+      name: 'Soymilk',
       image: 'images/soymilk.jpg'
     },
     {
@@ -58,12 +58,16 @@ $(window).on('load', function() {
       image: 'images/apple-sauce.jpg'
     },
     {
-      name: '  Taro Bun',
+      name: 'Taro Bun',
       image: 'images/taro-buns.jpg'
     },
     {
-      name: '  Egg Tarts',
+      name: 'Egg Tarts',
       image: 'images/egg-tarts.jpg'
+    },
+    {
+      name: 'Boiled Lettuce with Oyster Sauce',
+      image: 'images/lettuce.jpg'
     }
   ];
 
