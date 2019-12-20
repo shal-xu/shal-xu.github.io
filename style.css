@@ -1,6 +1,8 @@
 @charset "UTF-8";
+html,
 body {
   margin: 0;
+  height: 100%;
 }
 
 nav {
@@ -72,6 +74,7 @@ nav .highlight {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: calc(100% - 60px);
 }
 
 .page {
@@ -84,6 +87,7 @@ nav .highlight {
       flex-basis: 100%;
   display: inline-block;
   position: relative;
+  overflow-y: scroll;
 }
 
 #rsvp {
@@ -97,7 +101,7 @@ nav .highlight {
   -webkit-box-shadow: 0 0 5px lightgray;
           box-shadow: 0 0 5px lightgray;
   border: none;
-  background: white;
+  background: #4a2a3f;
   font-size: 20px;
   z-index: 1;
   -webkit-transition: all 0.5s;
@@ -123,6 +127,9 @@ nav .highlight {
   -webkit-transition: all 1s;
   transition: all 1s;
   position: relative;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 80px;
 }
 
 #script:hover {

@@ -1,5 +1,7 @@
+html,
 body {
   margin: 0;
+  height: 100%;
 }
 
 nav {
@@ -67,6 +69,7 @@ nav {
   overflow: hidden;
   width: 100%;
   display: flex;
+  height: calc(100% - 60px);
 }
 
 .page {
@@ -75,8 +78,8 @@ nav {
   width: 100%;
   flex-basis: 100%;
   display: inline-block;
-  //overflow: scroll;
   position: relative;
+  overflow-y: scroll;
 }
 
 #rsvp {
@@ -95,7 +98,7 @@ nav {
   }
 
   border: none;
-  background: white;
+  background: #4a2a3f;
   font-size: 20px;
   z-index: 1;
   transition: all 0.5s;
@@ -112,6 +115,8 @@ nav {
   transform: rotate(-15deg);
   transition: all 1s;
   position: relative;
+  align-self: flex-start;
+  margin-top: 80px;
   &:hover {
     color: gold;
   }
