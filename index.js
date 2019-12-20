@@ -81,4 +81,11 @@ $(window).on('load', function() {
       </div>`
     )
   );
+
+  $('.sparkle').sparkleh({
+    count: 50,
+    color: ['gold', 'white', 'red'],
+    speed: 0.5,
+    overlap: 60
+  });
 });
