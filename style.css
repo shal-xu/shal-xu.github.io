@@ -129,7 +129,7 @@ nav .highlight {
   position: relative;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin-top: 80px;
+  margin: 80px 0;
 }
 
 #script:hover {
@@ -206,10 +206,7 @@ nav .highlight {
 }
 
 .ornament {
-  -webkit-animation: dangle 3s ease-in-out 1s infinite alternate;
-          animation: dangle 3s ease-in-out 1s infinite alternate;
   -webkit-transform-origin: top;
           transform-origin: top;
-  right: 5rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -116,7 +116,7 @@ nav {
   transition: all 1s;
   position: relative;
   align-self: flex-start;
-  margin-top: 80px;
+  margin: 80px 0;
   &:hover {
     color: gold;
   }
@@ -167,7 +167,5 @@ nav {
 }
 
 .ornament {
-  animation: dangle 3s ease-in-out 1s infinite alternate;
   transform-origin: top;
-  right: 5rem;
 }
