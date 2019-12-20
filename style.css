@@ -10,7 +10,7 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   background: linear-gradient(330deg, #e20000 0%, #ffd011 100%);
 }
 
@@ -19,8 +19,8 @@ nav button {
   padding: 10px 0;
   width: 170px;
   height: 60px;
-  color: white;
   border: none;
+  color: white;
   background: none;
   font-size: 20px;
   z-index: 1;
@@ -36,9 +36,9 @@ nav button > span::before {
   content: '♥️ ';
   position: absolute;
   top: 100px;
+  left: 28px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  left: 28px;
 }
 
 nav button:focus {
@@ -81,10 +81,9 @@ nav .highlight {
   -webkit-transition: all 1s;
   transition: all 1s;
   -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 100%;
+      flex-shrink: 0;
   -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
+      flex-basis: 100%;
   display: inline-block;
   position: relative;
   overflow-y: scroll;
@@ -92,16 +91,16 @@ nav .highlight {
 
 #rsvp {
   cursor: pointer;
-  padding: 10px 0;
   width: 170px;
   height: 60px;
-  color: lightgray;
   margin: 20px;
+  padding: 10px 0;
+  background: #4a2a3f;
+  color: lightgray;
+  border: none;
   border-radius: 15px;
   -webkit-box-shadow: 0 0 5px lightgray;
-  box-shadow: 0 0 5px lightgray;
-  border: none;
-  background: #4a2a3f;
+          box-shadow: 0 0 5px lightgray;
   font-size: 20px;
   z-index: 1;
   -webkit-transition: all 0.5s;
@@ -110,7 +109,7 @@ nav .highlight {
 
 #rsvp:hover {
   -webkit-box-shadow: -5px -5px 20px yellow, 5px 5px 20px red;
-  box-shadow: -5px -5px 20px yellow, 5px 5px 20px red;
+          box-shadow: -5px -5px 20px yellow, 5px 5px 20px red;
   color: darkorange;
 }
 
@@ -119,17 +118,17 @@ nav .highlight {
 }
 
 #script {
+  position: relative;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 80px 0 80px 40px;
   font-size: 45px;
   font-family: 'Brush Script MT', cursive;
   color: lightgray;
   -webkit-transform: rotate(-15deg);
-  transform: rotate(-15deg);
+          transform: rotate(-15deg);
   -webkit-transition: all 1s;
   transition: all 1s;
-  position: relative;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  margin: 80px 0 80px 40px;
 }
 
 #script:hover {
@@ -139,103 +138,85 @@ nav .highlight {
 @-webkit-keyframes dangle {
   from {
     -webkit-transform: rotate(-20deg);
-    transform: rotate(-20deg);
+            transform: rotate(-20deg);
   }
   to {
     -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);
+            transform: rotate(20deg);
   }
 }
 
 @keyframes dangle {
   from {
     -webkit-transform: rotate(-20deg);
-    transform: rotate(-20deg);
+            transform: rotate(-20deg);
   }
   to {
     -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);
+            transform: rotate(20deg);
   }
 }
 
 .ornament {
   -webkit-transform-origin: top;
-  transform-origin: top;
+          transform-origin: top;
+  z-index: 2;
 }
 
 h1 {
+  position: relative;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 2px solid gold;
   color: white;
   text-align: center;
   font-size: 35px;
   line-height: 150%;
-  border-bottom: 2px solid gold;
-  margin-bottom: 20px;
-  padding-top: 20px;
-  position: relative;
 }
 
 h1:hover > .shadow {
-  -webkit-clip-path: polygon(
-    40% 100%,
-    45% 130%,
-    55% 130%,
-    60% 100%,
-    60% 100%,
-    40% 100%
-  );
-  clip-path: polygon(
-    40% 100%,
-    45% 130%,
-    55% 130%,
-    60% 100%,
-    60% 100%,
-    40% 100%
-  );
+  -webkit-clip-path: polygon(40% 100%, 45% 130%, 55% 130%, 60% 100%, 60% 100%, 40% 100%);
+          clip-path: polygon(40% 100%, 45% 130%, 55% 130%, 60% 100%, 60% 100%, 40% 100%);
 }
 
 h1 > .shadow {
   position: absolute;
   bottom: 0;
-  background: gold;
-  -webkit-clip-path: polygon(
-    40% 0%,
-    45% 30%,
-    55% 30%,
-    60% 0%,
-    60% 100%,
-    40% 100%
-  );
-  clip-path: polygon(40% 0%, 45% 30%, 55% 30%, 60% 0%, 60% 100%, 40% 100%);
+  padding-top: 20px;
+  background: yellow;
   color: black;
+  -webkit-clip-path: polygon(40% 0%, 45% 30%, 55% 30%, 60% 0%, 60% 100%, 40% 100%);
+          clip-path: polygon(40% 0%, 45% 30%, 55% 30%, 60% 0%, 60% 100%, 40% 100%);
   -webkit-transition: all 1s;
   transition: all 1s;
-  padding-top: 20px;
 }
 
 .item {
-  font-size: 30px;
+  height: 200px;
   padding: 10px;
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-preferred-size: 300px;
-  flex-basis: 300px;
-  height: 200px;
+      flex-basis: 300px;
   -ms-flex-negative: 0;
-  flex-shrink: 0;
+      flex-shrink: 0;
+  font-size: 30px;
+  text-align: center;
   color: white;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 
 .item > .background {
+  position: absolute;
+  z-index: -1;
   width: 320px;
   height: 220px;
   -webkit-transition: all 1s;
@@ -243,10 +224,8 @@ h1 > .shadow {
   background-size: cover;
   background-position: center;
   -webkit-transform: rotateY(0);
-  position: absolute;
-  z-index: -1;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .item:hover {
