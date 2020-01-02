@@ -68,6 +68,10 @@ $(window).on('load', function() {
     {
       name: 'Boiled Lettuce with Oyster Sauce',
       image: 'images/lettuce.jpg'
+    },
+    {
+      name: 'Seaweed Salad',
+      image: 'images/seaweed-salad.jpeg'
     }
   ];
 
