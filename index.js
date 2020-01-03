@@ -72,6 +72,10 @@ $(window).on('load', function() {
     {
       name: 'Seaweed Salad',
       image: 'images/seaweed-salad.jpeg'
+    },
+    {
+      name: 'Dragon Fruit',
+      image: 'images/dragonfruit.jpg'
     }
   ];
 
